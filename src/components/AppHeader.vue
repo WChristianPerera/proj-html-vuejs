@@ -60,7 +60,7 @@ export default {
     </div>
 
     <div class="jumbo">
-        <img src="../../public/img/home_finance_slider_bg.jpg" alt="">
+        <h1>Right People<span class="g-dot">.</span>Right Investments<span class="g-dot">.</span></h1>
     </div>
 
 
@@ -110,7 +110,13 @@ export default {
     }
 
     .jumbo{
-        
+        width: 100%;
+        height: 400px;
+        color: white;
+        background-image: url(../../public/img/home_finance_slider_bg.jpg);
+
+
+      
     }
 
 </style>
