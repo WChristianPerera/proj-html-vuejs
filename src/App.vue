@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  
+
 <AppHeader></AppHeader>
 
 <AppMain></AppMain>
@@ -18,6 +18,24 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss">
+*{
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+
+.g-btn{
+  border: none;
+  background-color: #5ADDCD;
+  color: white;
+  padding: 8px 20px;
+  margin: 15px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+                  
 
 </style>

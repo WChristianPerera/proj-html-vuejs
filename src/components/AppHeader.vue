@@ -1,37 +1,64 @@
 <script>
-import Item_1 from './Item_1.vue';
+    import Item_1 from './Item_1.vue';
+    import ClientLogo_1 from './ClientLogo_1.vue';
 
-export default {
-    components: {Item_1},
-    data() {
-        return {
-            list:{
-                items: [
-                    {
-                        "id": "0",
-                        "name": "HOME",
-                    },
-                    {
-                        "id": "1",
-                        "name": "ABOUT",
-                    },
-                    {
-                        "id": "2",
-                        "name": "SERVICES",
-                    },
-                    {
-                        "id": "3",
-                        "name": "PACKAGES",
-                    },
-                    {
-                        "id": "4",
-                        "name": "INSIGHT",
-                    },
-                ]
+    export default {
+        components: {Item_1,ClientLogo_1},
+        data() {
+            return {
+                list:{
+                    items: [
+                        {
+                            "id": "0",
+                            "name": "HOME",
+                        },
+                        {
+                            "id": "1",
+                            "name": "ABOUT",
+                        },
+                        {
+                            "id": "2",
+                            "name": "SERVICES",
+                        },
+                        {
+                            "id": "3",
+                            "name": "PACKAGES",
+                        },
+                        {
+                            "id": "4",
+                            "name": "INSIGHT",
+                        },
+                    ],
+                    clients: [
+                        {
+                            "id": "0",
+                            "img": "../../public/img/client-logo-7.png",
+                        },
+                        {
+                            "id": "1",
+                            "img": "../../public/img/client-logo-8.png",
+                        },
+                        {
+                            "id": "2",
+                            "img": "../../public/img/client-logo-9.png",
+                        },
+                        {
+                            "id": "3",
+                            "img": "../../public/img/client-logo-5.png",
+                        },
+                        {
+                            "id": "4",
+                            "img": "../../public/img/client-logo-6.png",
+                        },
+                        {
+                            "id": "5",
+                            "img": "../../public/img/client-logo-7.png",
+                        },
+                    ]
+                }
             }
         }
-    }
-};
+    };
 
 </script>
 
@@ -63,19 +90,35 @@ export default {
         <h1>Right People<span class="g-dot">.</span>Right Investments<span class="g-dot">.</span></h1>
     </div>
 
+    <!-- <div class="clients">
+        <ul>
+            <li v-for="client in list.clients" :key="client.id">
+                <ClientLogo_1 :img="client.img"/>
+                 
+            </li>
+        </ul>
+    </div> -->
+                 
+                             
+                    
+
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .contain{
-        max-width: 1400px;
-        margin-inline: auto;
+        height: 70px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        .logo{
+            margin-left: 40px;
+        }
+
         .info{
             display: flex;
+            margin-right: 40px;
 
             ul{
                 display: flex;
@@ -89,15 +132,6 @@ export default {
             .buttons{
                 display: flex;
 
-                .g-btn{
-                    border: none;
-                    background-color: #5ADDCD;
-                    padding: 0px 20px;
-                    margin: 15px;
-                    border-radius: 50px;
-                    cursor: pointer;
-                }
-
                 .plus{
                     border: none;
                     background-color: white;
@@ -106,17 +140,55 @@ export default {
                 }
             }
         }
-
     }
 
-    .jumbo{
-        width: 100%;
-        height: 400px;
-        color: white;
-        background-image: url(../../public/img/home_finance_slider_bg.jpg);
 
+    .jumbo{
+        width: auto;
+        height: 700px;
+        background-image: url(../../public/img/home_finance_slider_bg.jpg);
+        background-size: contain;
+
+        h1{
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            padding: 350px 0px;
+        }
+
+
+        .g-dot{
+            color: #5ADDCD;
+        }
 
       
+    }
+
+
+    .clients{
+        background-color: #EBEBEB;
+
+        ul{
+            display: flex;
+        }   
+
+        li{
+            list-style: none;
+            width: calc(100% / 6); 
+            max-width: 50px; 
+            
+            
+        
+            img{
+                max-width: 100%; 
+                height: auto;
+            }
+
+        
+        
+        }
+
+
     }
 
 </style>
